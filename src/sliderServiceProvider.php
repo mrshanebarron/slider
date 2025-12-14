@@ -9,8 +9,8 @@ class SliderServiceProvider extends ServiceProvider
     public function boot(): void
     {
         if (class_exists(\Livewire\Livewire::class)) {
-            \Livewire\Livewire::component('ld-slider', Livewire\Slider::class);
+            \Livewire\Livewire::component('sb-slider', Livewire\Slider::class);
         }
-        $this->loadViewsFrom(__DIR__ . '/../resources/views', 'ld-slider');
+        $this->loadViewsFrom(__DIR__ . '/../resources/views', 'sb-slider');
     }
 }

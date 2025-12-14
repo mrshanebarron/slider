@@ -20,6 +20,6 @@ class Slider extends Component
 
     public function render()
     {
-        return view('ld-slider::livewire.slider');
+        return view('sb-slider::livewire.slider');
     }
 }

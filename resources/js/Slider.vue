@@ -29,7 +29,7 @@
 import { ref, computed, onMounted, onUnmounted } from 'vue';
 
 export default {
-  name: 'LdSlider',
+  name: 'SbSlider',
   props: {
     modelValue: { type: Number, default: 0 },
     min: { type: Number, default: 0 },
