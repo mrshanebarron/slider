@@ -1,7 +1,15 @@
-<div class="w-full">
-    <div class="flex items-center gap-4">
-        <input type="range" wire:model.live="value" min="{{ $min }}" max="{{ $max }}" step="{{ $step }}" @if($disabled) disabled @endif class="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer accent-blue-600 disabled:opacity-50">
-        @if($showValue)<span class="text-sm font-medium text-gray-700 min-w-[3rem] text-right">{{ $value }}</span>@endif
+<div style="width: 100%;">
+    <div style="display: flex; align-items: center; gap: 16px;">
+        <input
+            type="range"
+            wire:model.live="value"
+            min="{{ $this->min }}"
+            max="{{ $this->max }}"
+            step="{{ $this->step }}"
+            @if($this->disabled) disabled @endif
+            style="width: 100%; height: 8px; background: #e5e7eb; border-radius: 8px; appearance: none; cursor: pointer; accent-color: #2563eb; {{ $this->disabled ? 'opacity: 0.5;' : '' }}"
+        >
+        @if($this->showValue)<span style="font-size: 14px; font-weight: 500; color: #374151; min-width: 48px; text-align: right;">{{ $this->value }}</span>@endif
     </div>
-    <div class="flex justify-between mt-1"><span class="text-xs text-gray-500">{{ $min }}</span><span class="text-xs text-gray-500">{{ $max }}</span></div>
+    <div style="display: flex; justify-content: space-between; margin-top: 4px;"><span style="font-size: 12px; color: #6b7280;">{{ $this->min }}</span><span style="font-size: 12px; color: #6b7280;">{{ $this->max }}</span></div>
 </div>
